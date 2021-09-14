@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      >
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<nav th:fragment="navbar">
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo">Logo</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="/">Home</a></li>
+        <li><a href="/add/artist">Add Artist</a></li>
+         <li><a href="/artists">Artists</a></li>
+     </ul>
+    </div>
+  </nav>
+<div class="row">
+    <div class="col s12 m4 l3" th:each="artist: ${artists}">
+      <div class="card-panel teal">
+      	<p th:text="'ID: '+${artist.id}"/>
+      	<p th:text="'Name: '+${artist.name}"/>
+      	<p th:text="'Surname: '+${artist.surname}"/>
+      	<p th:text="'Birth: '+${artist.date}"/>
+      	<p th:text="'NumOfWorks: '+${artist.numWorks}"/>
+      </div>
+    </div>
+</div>
+</body>
+</html>

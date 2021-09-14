@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"it.softwareinside.smista","l":"Central"},{"p":"it.softwareinside.smista","l":"CreatePdf"},{"p":"it.softwareinside.smista","l":"Letter"},{"p":"it.softwareinside.smista","l":"Operator"},{"p":"it.softwareinside.smista","l":"PriorityLetter"},{"p":"<Unnamed>","l":"Test"}]

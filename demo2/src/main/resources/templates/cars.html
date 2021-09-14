@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+    <style>
+      body {
+        font-family: "Encode Sans SC", sans-serif;
+        height: 94vh;
+      }
+  
+
+    </style>
+
+    <title>Car</title>
+  </head>
+  <body>
+	 <th:block th:insert="fragments/navbar :: navbar"></th:block>
+	   <section id="cars" class="h-100">
+	   		<div class="container-fluid h-100 ">
+		   		<div class="row h-100 justify-content-center align-items-center">
+		   			<div class="col-4 text-center" th:each="car: ${cars}">
+		    			<div class="card mx-auto" style="width: 18rem;">
+			    			<span th:each="foto,iter: ${car.foto}">
+			    				<img th:if="${iter.index==0}" th:src="${foto}" class="card-img-top" alt="...">
+			  				</span>
+		  					<div class="card-body">
+								<h5 th:text="${car.modello}" class="card-title"></h5>
+								<p th:text="${car.marca}" class="card-text"></p>
+								<p class="card-text" th:text="${car.colore}"></p>
+								<p class="card-text" th:text="${car.prezzo}"></p>
+								<a href="#" class="btn btn-primary">Go somewhere</a>
+		 					</div>
+						</div>
+		   			</div>
+		   		</div>
+	   		</div>
+		</section>
+  </body>
+</html>

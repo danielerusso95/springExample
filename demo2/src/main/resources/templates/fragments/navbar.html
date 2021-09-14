@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head th:replace="head :: head"></head>
+<body>
+<nav th:fragment="navbar" class="navbar navbar-expand-lg bg-dark navbar-light">
+	      <button
+	        class="navbar-toggler"
+	        type="button"
+	        data-toggle="collapse"
+	        data-target="#navbarSupportedContent"
+	        aria-controls="navbarSupportedContent"
+	        aria-expanded="false"
+	        aria-label="Toggle navigation"
+	      >
+	        <span class="navbar-toggler-icon"></span>
+	      </button>
+	
+	      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+	        <ul class="navbar-nav mx-auto">
+	          <li class="nav-item">
+	            <a class="nav-link text-white" href="/">Home</a>
+	          </li>
+	          <li class="nav-item">
+	            <a class="nav-link text-white" href="/contacts">
+	            	Contatti
+	            </a>
+	          </li>
+	          <li class="nav-item">
+	            <a class="nav-link text-white" href="/cars">Cars</a>
+	          </li>
+	          <li class="nav-item">
+	            <a class="nav-link text-white" href="/carsss">Cars Materialize</a>
+	          </li>
+	        </ul>
+	      </div>
+	   </nav>
+</body>
+</html>
